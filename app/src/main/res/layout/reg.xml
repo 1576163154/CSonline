@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="#ecf0ee"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_me_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:background="@color/title_bg">
+
+
+        <ImageView
+            android:id="@+id/iv_toMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_back"/>
+
+
+        <TextView
+            android:id="@+id/tv_me_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/reg"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_login"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:orientation="vertical">
+
+        <xion.csonline.widget.ClearEditText
+            android:id="@+id/cet_reg_account"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawablePadding="17dp"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/usericon"
+            android:hint="@string/input_account"
+            android:textColor="@color/blackfont"
+            android:maxLines="1"
+            android:textColorHint="@color/textHintGray"
+            android:focusable="true"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_red"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <xion.csonline.widget.ClearEditText
+            android:id="@+id/cet_reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawablePadding="17dp"
+            android:drawableStart="@drawable/passwordicon"
+            android:gravity="center_vertical"
+            android:hint="@string/input_password"
+            android:textColor="@color/blackfont"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:maxLength="18"
+            android:textColorHint="@color/textHintGray"
+            android:textSize="18sp">
+        </xion.csonline.widget.ClearEditText>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_red"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <xion.csonline.widget.ClearEditText
+            android:id="@+id/cet_reg_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawablePadding="17dp"
+            android:drawableStart="@drawable/passwordicon"
+            android:gravity="center_vertical"
+            android:hint="@string/comfirm_password"
+            android:textColor="@color/blackfont"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:maxLength="18"
+            android:textColorHint="@color/textHintGray"
+            android:textSize="18sp">
+        </xion.csonline.widget.ClearEditText>
+
+        <TextView
+            android:id="@+id/tv_password_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_red"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+        <xion.csonline.widget.ClearEditText
+            android:id="@+id/cet_reg_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawablePadding="17dp"
+            android:drawableStart="@drawable/phone"
+            android:gravity="center_vertical"
+            android:textColor="@color/blackfont"
+            android:inputType="phone"
+            android:hint="@string/input_phonenum"
+            android:maxLines="1"
+            android:maxLength="11"
+            android:textColorHint="@color/textHintGray"
+            android:textSize="18sp">
+        </xion.csonline.widget.ClearEditText>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_red"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reg_getcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_reg_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_verification_code"/>
+
+        <xion.csonline.widget.ClearEditText
+            android:id="@+id/cet_reg_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackfont"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error_red"
+        android:textSize="15sp"
+       android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:background="@drawable/btn_grayshape"
+        android:text="@string/reg"
+        android:textColor="@color/textHintGray"
+        android:textSize="20sp"/>
+</LinearLayout>

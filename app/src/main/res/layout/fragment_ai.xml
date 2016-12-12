@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_ai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp">
+
+    <FrameLayout
+        android:id="@+id/fl_cpv_ai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <xion.csonline.widget.CirclePortraitView
+            android:id="@+id/cpv_ai"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/sherlock"></xion.csonline.widget.CirclePortraitView>
+
+        <TextView
+            android:id="@+id/tv_messagebubble_ai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/messagebubble"
+            android:text="6"
+            android:textColor="#ffffff"
+            android:textSize="12sp"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_sendername_ai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fl_cpv_ai"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/fl_cpv_ai"
+        android:text="智能机器人"
+        android:textColor="@color/blackfont"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_messagetime_ai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_sendername_ai"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="刚刚"/>
+
+    <TextView
+        android:id="@+id/tv_messagerecent_ai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fl_cpv_ai"
+        android:layout_alignLeft="@+id/tv_sendername_ai"
+        android:text="你好，我是智能机器人"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp">
+
+    <FrameLayout
+        android:id="@+id/fl_cpv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <xion.csonline.widget.CirclePortraitView
+            android:id="@+id/cpv_cse"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/sherlock"></xion.csonline.widget.CirclePortraitView>
+
+        <TextView
+            android:id="@+id/tv_messagebubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/messagebubble"
+            android:text="6"
+            android:textColor="#ffffff"
+            android:textSize="12sp"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_sendername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fl_cpv"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/fl_cpv"
+        android:text="客服名"
+        android:textColor="@color/blackfont"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_messagetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_sendername"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="刚刚"/>
+
+    <TextView
+        android:id="@+id/tv_messagerecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fl_cpv"
+        android:layout_alignLeft="@+id/tv_sendername"
+        android:text="刚刚发出的消息"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

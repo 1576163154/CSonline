@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/iv_toAI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_ai"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/iv_toCSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_cse_white"/>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/cse"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_me_white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <fragment
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/frag_ai"
+            android:name="xion.csonline.fragment.AIFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <fragment
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/frag_cse"
+            android:name="xion.csonline.fragment.CSEFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>
